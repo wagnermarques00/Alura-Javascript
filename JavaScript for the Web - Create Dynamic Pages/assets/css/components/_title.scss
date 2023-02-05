@@ -1,0 +1,9 @@
+@import "../abstract/variables";
+
+.title {
+	margin-bottom: 20px;
+
+	color: $white;
+	font-size: $size-title;
+	font-weight: 600;
+}
