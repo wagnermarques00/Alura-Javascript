@@ -1,0 +1,9 @@
+document.querySelector(".key_pom");
+document.querySelector(".key_clap");
+document.querySelector(".key_tim");
+document.querySelector(".key_puff");
+document.querySelector(".key_splash");
+document.querySelector(".key_toim");
+document.querySelector(".key_psh");
+document.querySelector(".key_tic");
+document.querySelector(".key_tom");
