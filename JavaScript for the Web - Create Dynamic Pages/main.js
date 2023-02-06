@@ -2,4 +2,6 @@ function playSoundPom() {
 	document.querySelector("#sound_key_pom").play();
 }
 
-document.querySelector(".key_pom").onclick = playSoundPom;
+const listOfKeys = document.querySelectorAll(".key");
+
+listOfKeys[0].onclick = playSoundPom;
