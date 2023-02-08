@@ -1,0 +1,66 @@
+@import "../abstract/variables";
+
+.equipments {
+	flex-basis: 32%;
+
+	.assembler {
+		height: 100%;
+
+		.assembler-content {
+			padding: 2em 10%;
+
+			.part {
+				padding: 1em 0;
+
+				.part-title {
+					color: $main-white;
+					font-size: 2.5em;
+					text-transform: uppercase;
+				}
+
+				.control {
+					display: inline-flex;
+					align-items: center;
+					align-self: flex-end;
+
+					background: $main-black;
+					border-radius: 25px;
+					float: right;
+					padding: 5px;
+
+					.control-counter {
+						display: inline-flex;
+						align-items: center;
+
+						background: none;
+						border: 0;
+						height: 35px;
+						margin: 0 1rem;
+						padding-top: 8px;
+						width: 40px;
+
+						color: $main-white;
+						font-size: 2.5em;
+						text-align: center;
+					}
+
+					.control-adjustment {
+						display: inline-block;
+
+						background: $main-black;
+						border: 3px solid $main-gray;
+						border-radius: 50%;
+						cursor: pointer;
+						height: 40px;
+						width: 40px;
+						text-align: center;
+
+						color: $main-gray;
+						font-size: 4em;
+						line-height: 44px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url("/assets/img/fundo.jpg");
+  background-position: center center;
+  background-size: cover cover;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+main {
+  display: flex;
+  gap: 1vw;
+  height: 80vh;
+  margin: 10vh 8vw 10vh 12vw;
+  width: 80vw;
+}
+
+body,
+input {
+  font-family: "Teko", sans-serif;
+}
+
+@media screen and (max-width: 1600px) {
+  body {
+    font-size: 14px;
+  }
+  main {
+    width: 90vw;
+    height: 80vh;
+    margin: 5vh auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 13px;
+  }
+  main {
+    width: 96vw;
+    height: 80vh;
+    margin: 10vh auto;
+  }
+}
+.robotron {
+  background: url(../img/estrutura.png) no-repeat;
+  background-position: center center;
+  margin: 0;
+  flex-basis: 40%;
+  position: relative;
+}
+.robotron .robot {
+  height: 110%;
+  z-index: 1;
+  position: absolute;
+  left: -20%;
+  top: -5%;
+}
+.robotron .title {
+  bottom: 7rem;
+  left: -3rem;
+  position: absolute;
+  transform: rotate(180deg);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Teko", sans-serif;
+  font-size: 130px;
+  font-weight: 500;
+  line-height: 0.8;
+  text-orientation: mixed;
+  writing-mode: vertical-rl;
+}
+
+.box {
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 5px solid var(--main-cinza);
+  -webkit-clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
+          clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
+  height: 80%;
+}
+
+.statistics {
+  flex-basis: 23%;
+  padding: 2em 2em 0;
+}
+.statistics .statistic {
+  display: flex;
+  align-items: flex-start;
+  height: 25%;
+  color: #ffffff;
+}
+.statistics .statistic .statistic-title {
+  flex-basis: 40%;
+  order: 1;
+  border-bottom: 1px solid #cccccc;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+.statistics .statistic .statistic-value {
+  flex-basis: 60%;
+  order: 2;
+  position: relative;
+  margin: 10px 0 0;
+  margin: -10px 0 0;
+}
+.statistics .statistic .statistic-value::after {
+  display: block;
+  border: 1px solid var(--main-cinza);
+  border-radius: 50%;
+  padding-bottom: 100%;
+  content: "";
+}
+.statistics .statistic .statistic-value .statistic-number {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-46%);
+  width: 100%;
+  font-size: 3em;
+  line-height: 100%;
+  text-align: center;
+}
+.statistics .statistic:nth-child(2n) .statistic-title {
+  order: 2;
+  text-align: right;
+}
+.statistics .statistic:nth-child(2n) .statistic-value {
+  order: 1;
+  flex-basis: 35%;
+  margin: 10px 0 0;
+}
+
+.linha {
+  border-color: #cccccc;
+}
+
+.equipments {
+  flex-basis: 32%;
+}
+.equipments .assembler {
+  height: 100%;
+}
+.equipments .assembler .assembler-content {
+  padding: 2em 10%;
+}
+.equipments .assembler .assembler-content .part {
+  padding: 1em 0;
+}
+.equipments .assembler .assembler-content .part .part-title {
+  color: #ffffff;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+.equipments .assembler .assembler-content .part .control {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-end;
+  background: #000000;
+  border-radius: 25px;
+  float: right;
+  padding: 5px;
+}
+.equipments .assembler .assembler-content .part .control .control-counter {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: 0;
+  height: 35px;
+  margin: 0 1rem;
+  padding-top: 8px;
+  width: 40px;
+  color: #ffffff;
+  font-size: 2.5em;
+  text-align: center;
+}
+.equipments .assembler .assembler-content .part .control .control-adjustment {
+  display: inline-block;
+  background: #000000;
+  border: 3px solid #cccccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  color: #cccccc;
+  font-size: 4em;
+  line-height: 44px;
+}
+
+.production {
+  background: #ffffff;
+  border: 3px solid #ffffff;
+  -webkit-clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
+  cursor: pointer;
+  float: right;
+  margin-top: 1em;
+  padding: 0.2em 1em;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.production:hover {
+  background: #000000;
+  color: #ffffff;
+}/*# sourceMappingURL=style.css.map */
