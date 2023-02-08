@@ -13,6 +13,21 @@
 
 		color: $main-white;
 
+		&:nth-child(2n) {
+			.statistic-title {
+				order: 2;
+
+				text-align: right;
+			}
+
+			.statistic-value {
+				flex-basis: 35%;
+				order: 1;
+
+				margin: 10px 0 0;
+			}
+		}
+
 		.statistic-title {
 			flex-basis: 40%;
 			order: 1;
@@ -24,17 +39,16 @@
 		}
 
 		.statistic-value {
-			flex-basis: 60%;
+			flex-basis: 45%;
 			order: 2;
 
 			position: relative;
-			margin: 10px 0 0;
 			margin: -10px 0 0;
 
 			&::after {
 				display: block;
 
-				border: 1px solid var(--main-cinza);
+				border: 1px solid $main-gray;
 				border-radius: 50%;
 				padding-bottom: 100%;
 
@@ -54,16 +68,5 @@
 				text-align: center;
 			}
 		}
-	}
-
-	.statistic:nth-child(2n) .statistic-title {
-		order: 2;
-		text-align: right;
-	}
-
-	.statistic:nth-child(2n) .statistic-value {
-		order: 1;
-		flex-basis: 35%;
-		margin: 10px 0 0;
 	}
 }

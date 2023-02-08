@@ -1,6 +1,8 @@
+@import "../abstract/variables";
+
 .box {
 	background: rgba(0, 0, 0, 0.6);
-	border-left: 5px solid var(--main-cinza);
+	border-left: 5px solid $main-gray;
 	clip-path: polygon(
 		calc(100% - 30px) 0,
 		100% 30px,

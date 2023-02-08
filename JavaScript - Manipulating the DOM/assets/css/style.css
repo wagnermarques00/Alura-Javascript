@@ -46,7 +46,7 @@ input {
   }
 }
 .robotron {
-  background: url(../img/estrutura.png) no-repeat;
+  background: url(/assets/img/estrutura.png) no-repeat;
   background-position: center center;
   margin: 0;
   flex-basis: 40%;
@@ -75,7 +75,7 @@ input {
 
 .box {
   background: rgba(0, 0, 0, 0.6);
-  border-left: 5px solid var(--main-cinza);
+  border-left: 5px solid #cccccc;
   -webkit-clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
           clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
   height: 80%;
@@ -91,6 +91,15 @@ input {
   height: 25%;
   color: #ffffff;
 }
+.statistics .statistic:nth-child(2n) .statistic-title {
+  order: 2;
+  text-align: right;
+}
+.statistics .statistic:nth-child(2n) .statistic-value {
+  flex-basis: 35%;
+  order: 1;
+  margin: 10px 0 0;
+}
 .statistics .statistic .statistic-title {
   flex-basis: 40%;
   order: 1;
@@ -99,15 +108,14 @@ input {
   text-transform: uppercase;
 }
 .statistics .statistic .statistic-value {
-  flex-basis: 60%;
+  flex-basis: 45%;
   order: 2;
   position: relative;
-  margin: 10px 0 0;
   margin: -10px 0 0;
 }
 .statistics .statistic .statistic-value::after {
   display: block;
-  border: 1px solid var(--main-cinza);
+  border: 1px solid #cccccc;
   border-radius: 50%;
   padding-bottom: 100%;
   content: "";
@@ -122,17 +130,8 @@ input {
   line-height: 100%;
   text-align: center;
 }
-.statistics .statistic:nth-child(2n) .statistic-title {
-  order: 2;
-  text-align: right;
-}
-.statistics .statistic:nth-child(2n) .statistic-value {
-  order: 1;
-  flex-basis: 35%;
-  margin: 10px 0 0;
-}
 
-.linha {
+.line {
   border-color: #cccccc;
 }
 
