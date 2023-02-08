@@ -14,7 +14,7 @@
 	<body>
 		<main>
 			<section class="robotron">
-				<img class="robot" src="./assets/img/robotron.png" alt="Robotron" />
+				<img class="robot" id="robotron" src="./assets/img/robotron.png" alt="Robotron" />
 				<figcaption class="title">ROBOTRON <br />2000</figcaption>
 			</section>
 
@@ -51,9 +51,9 @@
 						<div class="part">
 							<label for="" class="part-title">Braços</label>
 							<div class="control">
-								<buttom class="control-adjustment">-</buttom>
-								<input type="text" class="control-counter" value="00" />
-								<buttom class="control-adjustment">+</buttom>
+								<buttom class="control-adjustment" id="subtract">-</buttom>
+								<input class="control-counter" id="arm" type="text" value="00" />
+								<buttom class="control-adjustment" id="sum">+</buttom>
 							</div>
 						</div>
 
@@ -63,7 +63,7 @@
 							<label for="" class="part-title">Blindagem</label>
 							<div class="control">
 								<buttom class="control-adjustment">-</buttom>
-								<input type="text" class="control-counter" value="00" />
+								<input class="control-counter" type="text" value="00" />
 								<buttom class="control-adjustment">+</buttom>
 							</div>
 						</div>
@@ -74,7 +74,7 @@
 							<label for="" class="part-title">Núcleos</label>
 							<div class="control">
 								<buttom class="control-adjustment">-</buttom>
-								<input type="text" class="control-counter" value="00" />
+								<input class="control-counter" type="text" value="00" />
 								<buttom class="control-adjustment">+</buttom>
 							</div>
 						</div>
@@ -85,7 +85,7 @@
 							<label for="" class="part-title">Pernas</label>
 							<div class="control">
 								<buttom class="control-adjustment">-</buttom>
-								<input type="text" class="control-counter" value="00" />
+								<input class="control-counter" type="text" value="00" />
 								<buttom class="control-adjustment">+</buttom>
 							</div>
 						</div>
@@ -96,14 +96,16 @@
 							<label for="" class="part-title">Foguetes</label>
 							<div class="control">
 								<buttom class="control-adjustment">-</buttom>
-								<input type="text" class="control-counter" value="00" />
+								<input class="control-counter" type="text" value="00" />
 								<buttom class="control-adjustment">+</buttom>
 							</div>
 						</div>
 					</div>
-					<input type="submit" value="Iniciar produção" class="production" id="production" />
+					<input class="production" id="production" type="submit" value="Iniciar produção" />
 				</form>
 			</section>
 		</main>
+
+		<script src="./main.js"></script>
 	</body>
 </html>
