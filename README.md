@@ -5,8 +5,9 @@ Studies carried out on the Alura platform. I will choose to put the codes in Eng
 ## Studied so far:
 
 1. JavaScript for the Web: Create Dynamic Pages
+1. JavaScript: Manipulating the DOM
 
 ## Studying at the moment:
 
-- JavaScript: Manipulating the DOM
+- JavaScript for the Web: Storing Data in the Browser
 
