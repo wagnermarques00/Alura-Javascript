@@ -1,0 +1,26 @@
+@import "../abstract/variables";
+
+.add {
+	width: 100%;
+
+	input {
+		border: 2px solid $color-purple-4;
+		border-radius: 10px;
+
+		box-sizing: border-box;
+		margin: 0.5em 0 1em;
+		padding: 1em 0.5em;
+		width: 100%;
+	}
+
+	label {
+		display: block;
+	}
+
+	.register {
+		background-color: $color-purple-4;
+		cursor: pointer;
+
+		color: $color-white;
+	}
+}

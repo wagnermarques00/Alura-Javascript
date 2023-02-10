@@ -1,0 +1,29 @@
+@import "./variables";
+
+html {
+	background: $body-gradient;
+	width: 100%;
+
+	font-family: $font-roboto;
+}
+
+.content {
+	display: flex;
+	align-items: flex-start;
+	gap: 2em;
+
+	padding: 0.5rem;
+
+	.main {
+		display: flex;
+		flex-basis: auto;
+		flex-grow: 1;
+		gap: 2em;
+
+		box-sizing: border-box;
+		min-width: 600px;
+		padding: 4em 2em 2em;
+		background: $color-orange-1;
+		border-radius: 10px;
+	}
+}

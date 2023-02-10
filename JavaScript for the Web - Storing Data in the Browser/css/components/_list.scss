@@ -1,0 +1,37 @@
+@import "../abstract/variables";
+
+.list {
+	margin: 0;
+	padding: 0;
+
+	.list__item {
+		display: inline-flex;
+		align-items: center;
+		gap: 1em;
+
+		box-sizing: border-box;
+		margin: 0 0 1em;
+		padding: 0.6em 2em;
+		width: 100%;
+
+		background: $color-white;
+		border-radius: 10px;
+		list-style: none;
+
+		font-size: 20px;
+
+		strong {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			height: 40px;
+			width: 40px;
+
+			background: $color-orange-1;
+			border-radius: 50%;
+
+			font-weight: 400;
+		}
+	}
+}
