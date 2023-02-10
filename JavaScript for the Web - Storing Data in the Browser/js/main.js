@@ -14,20 +14,20 @@ function renderElementToList(name, quantity) {
 	appendItemToList(itemCreated);
 }
 
-function createElementToList(name, quantity) {
+function createElementToList(elementName, elementQuantity) {
 	const itemQuantity = document.createElement("strong");
-	const newItem = document.createElement("li");
+	const element = document.createElement("li");
 
-	itemQuantity.innerHTML = quantity;
+	itemQuantity.innerHTML = elementQuantity;
 
-	newItem.classList.add("list__item");
-	newItem.appendChild(itemQuantity);
-	newItem.innerHTML += name;
+	element.classList.add("list__item");
+	element.appendChild(itemQuantity);
+	element.innerHTML += elementName;
 
-	return newItem;
+	return element;
 }
 
-function appendItemToList(itemCreated) {
+function appendItemToList(item) {
 	const list = document.getElementById("list");
-	list.appendChild(itemCreated);
+	list.appendChild(item);
 }
