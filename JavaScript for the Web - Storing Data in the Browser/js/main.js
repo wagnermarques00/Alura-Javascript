@@ -1,12 +1,17 @@
 const form = document.getElementById("add-item");
+const items = [];
 
 form.addEventListener("submit", (event) => {
 	event.preventDefault();
 
-	const name = event.target.elements[0].value;
-	const quantity = event.target.elements[1].value;
+	const name = event.target.elements[0];
+	const quantity = event.target.elements[1];
 
-	renderElementToList(name, quantity);
+	renderElementToList(name.value, quantity.value);
+	saveToLocalStorage(name.value, quantity.value);
+
+	name.value = "";
+	quantity.value = "";
 });
 
 function renderElementToList(name, quantity) {
@@ -30,4 +35,15 @@ function createElementToList(elementName, elementQuantity) {
 function appendItemToList(item) {
 	const list = document.getElementById("list");
 	list.appendChild(item);
+}
+
+function saveToLocalStorage(itemName, itemQuantity) {
+	const actualItem = {
+		name: itemName,
+		quantity: itemQuantity,
+	};
+
+	items.push(actualItem);
+
+	localStorage.setItem("items", JSON.stringify(items));
 }

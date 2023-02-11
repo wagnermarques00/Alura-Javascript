@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 html {
   background: radial-gradient(farthest-corner at right top, #21a09d, #06182d);
+  height: 100%;
   width: 100%;
   font-family: "Roboto", cursive;
 }
