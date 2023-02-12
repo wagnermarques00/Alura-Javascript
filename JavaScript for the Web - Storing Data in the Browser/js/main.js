@@ -1,5 +1,9 @@
 const form = document.getElementById("add-item");
-const items = [];
+const items = JSON.parse(localStorage.getItem("items")) || [];
+
+items.forEach((element) => {
+	renderElementToList(element.name, element.quantity);
+});
 
 form.addEventListener("submit", (event) => {
 	event.preventDefault();
