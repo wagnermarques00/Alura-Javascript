@@ -1,53 +1,56 @@
 const form = document.getElementById("add-item");
+const list = document.getElementById("list");
 const items = JSON.parse(localStorage.getItem("items")) || [];
 
 items.forEach((element) => {
-	renderElementToList(element.name, element.quantity);
+	createElement(element);
 });
 
 form.addEventListener("submit", (event) => {
 	event.preventDefault();
 
-	const name = event.target.elements[0];
-	const quantity = event.target.elements[1];
+	const name = event.target.elements["name"];
+	const quantity = event.target.elements["quantity"];
+	const exists = items.find((element) => element.name === name.value);
 
-	renderElementToList(name.value, quantity.value);
-	saveToLocalStorage(name.value, quantity.value);
+	const actualItem = {
+		name: name.value,
+		quantity: quantity.value,
+	};
+
+	if (exists) {
+		actualItem.id = exists.id;
+
+		updateElement(actualItem);
+
+		items[exists.id] = actualItem;
+	} else {
+		actualItem.id = items.length;
+		createElement(actualItem);
+
+		items.push(actualItem);
+	}
+
+	localStorage.setItem("items", JSON.stringify(items));
 
 	name.value = "";
 	quantity.value = "";
 });
 
-function renderElementToList(name, quantity) {
-	const itemCreated = createElementToList(name, quantity);
-	appendItemToList(itemCreated);
-}
+function createElement(item) {
+	const newItem = document.createElement("li");
+	newItem.classList.add("list__item");
 
-function createElementToList(elementName, elementQuantity) {
 	const itemQuantity = document.createElement("strong");
-	const element = document.createElement("li");
+	itemQuantity.innerHTML = item.quantity;
+	itemQuantity.dataset.id = item.id;
+	newItem.appendChild(itemQuantity);
 
-	itemQuantity.innerHTML = elementQuantity;
+	newItem.innerHTML += item.name;
 
-	element.classList.add("list__item");
-	element.appendChild(itemQuantity);
-	element.innerHTML += elementName;
-
-	return element;
+	list.appendChild(newItem);
 }
 
-function appendItemToList(item) {
-	const list = document.getElementById("list");
-	list.appendChild(item);
-}
-
-function saveToLocalStorage(itemName, itemQuantity) {
-	const actualItem = {
-		name: itemName,
-		quantity: itemQuantity,
-	};
-
-	items.push(actualItem);
-
-	localStorage.setItem("items", JSON.stringify(items));
+function updateElement(item) {
+	document.querySelector(`[data-id="${item.id}"]`).innerHTML = item.quantity;
 }
