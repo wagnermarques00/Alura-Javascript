@@ -44,10 +44,9 @@ function createElement(item) {
 	const itemQuantity = document.createElement("strong");
 	itemQuantity.innerHTML = item.quantity;
 	itemQuantity.dataset.id = item.id;
+
 	newItem.appendChild(itemQuantity);
-
 	newItem.innerHTML += item.name;
-
 	newItem.appendChild(deleteButton(item.id));
 
 	list.appendChild(newItem);
@@ -60,6 +59,7 @@ function updateElement(item) {
 function deleteButton(id) {
 	const elementButton = document.createElement("button");
 	elementButton.innerText = "Deletar";
+	elementButton.classList.add("list__item__button-delete");
 
 	elementButton.addEventListener("click", function () {
 		deleteElement(this.parentNode, id);

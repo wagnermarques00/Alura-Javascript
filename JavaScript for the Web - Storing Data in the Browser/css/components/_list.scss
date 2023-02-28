@@ -33,5 +33,15 @@
 
 			font-weight: 400;
 		}
+
+		.list__item__button-delete {
+			background-color: $color-red-1;
+			border: none;
+			border-radius: 0.5rem;
+			padding: 0.5rem 1rem;
+
+			color: $color-white;
+			font-weight: 600;
+		}
 	}
 }
