@@ -9,9 +9,10 @@ items.forEach((element) => {
 form.addEventListener("submit", (event) => {
 	event.preventDefault();
 
+	const actualIndex = items.findIndex((element) => element.id === exists.id);
+	const exists = items.find((element) => element.name === name.value);
 	const name = event.target.elements["name"];
 	const quantity = event.target.elements["quantity"];
-	const exists = items.find((element) => element.name === name.value);
 
 	const actualItem = {
 		name: name.value,
@@ -20,10 +21,8 @@ form.addEventListener("submit", (event) => {
 
 	if (exists) {
 		actualItem.id = exists.id;
-
 		updateElement(actualItem);
-
-		items[items.findIndex((element) => element.id === exists.id)] = actualItem;
+		items[actualIndex] = actualItem;
 	} else {
 		actualItem.id = items[items.length - 1] ? items[items.length - 1].id + 1 : 0;
 		createElement(actualItem);
@@ -38,13 +37,13 @@ form.addEventListener("submit", (event) => {
 });
 
 function createElement(item) {
-	const newItem = document.createElement("li");
-	newItem.classList.add("list__item");
-
 	const itemQuantity = document.createElement("strong");
+	const newItem = document.createElement("li");
+
 	itemQuantity.innerHTML = item.quantity;
 	itemQuantity.dataset.id = item.id;
 
+	newItem.classList.add("list__item");
 	newItem.appendChild(itemQuantity);
 	newItem.innerHTML += item.name;
 	newItem.appendChild(deleteButton(item.id));
@@ -53,11 +52,22 @@ function createElement(item) {
 }
 
 function updateElement(item) {
-	document.querySelector(`[data-id="${item.id}"]`).innerHTML = item.quantity;
+	const itemQuantity = document.querySelector(`[data-id="${item.id}"]`).innerHTML;
+	itemQuantity = item.quantity;
+}
+
+function deleteElement(tag, id) {
+	tag.remove();
+
+	const indexToRemove = items.findIndex(({ id: itemId }) => itemId === id);
+	items.splice(indexToRemove, 1);
+
+	localStorage.setItem("items", JSON.stringify(items));
 }
 
 function deleteButton(id) {
 	const elementButton = document.createElement("button");
+
 	elementButton.innerText = "Deletar";
 	elementButton.classList.add("list__item__button-delete");
 
@@ -66,15 +76,4 @@ function deleteButton(id) {
 	});
 
 	return elementButton;
-}
-
-function deleteElement(tag, id) {
-	tag.remove();
-
-	items.splice(
-		items.findIndex((element) => element.id === id),
-		1
-	);
-
-	localStorage.setItem("items", JSON.stringify(items));
 }
