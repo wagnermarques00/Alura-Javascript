@@ -1,0 +1,30 @@
+@import "./_variables.scss";
+
+body {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+	background-color: $background-color;
+	color: $primary-color;
+
+	min-height: 100vh;
+	margin: 0;
+
+	font-family: $font-fira;
+	font-weight: 200;
+	text-align: center;
+
+	h1 {
+		font-size: 5em;
+		font-weight: 600;
+	}
+
+	h3 {
+		margin-top: 1.25rem;
+
+		font-size: 2em;
+		font-weight: 400;
+	}
+}
