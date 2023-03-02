@@ -1,5 +1,5 @@
 const highestValue = 100;
-const lowestValue = 95;
+const lowestValue = 1;
 const secretNumber = generateRandomNumber();
 
 const highestValueElement = document.getElementById("highest-value");
