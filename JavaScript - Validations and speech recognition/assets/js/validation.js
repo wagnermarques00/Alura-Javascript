@@ -14,9 +14,11 @@ function verifyIfGuessIsAValidNumber(guess) {
 	}
 
 	if (number === secretNumber) {
-		document.body.innerHTML += `
+		guessElement.innerHTML += `
             <h2>Você acertou!!</h2>
             <h3>O número secreto era ${secretNumber}</h3>
+
+            <button class="btn-play" id="play-again">Jogar novamente</button>
         `;
 	} else if (number > secretNumber) {
 		guessElement.innerHTML += `
@@ -36,3 +38,9 @@ function numberIsHigherOrLowerThanGuessThanAllowed(guess) {
 function invalidGuess(number) {
 	return Number.isNaN(number);
 }
+
+document.body.addEventListener("click", (event) => {
+	if (event.target.id == "play-again") {
+		window.location.reload();
+	}
+});
