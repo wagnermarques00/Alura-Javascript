@@ -1,46 +1,55 @@
-function verifyIfGuessIsAValidNumber(guess) {
+function validateGuess(guess) {
 	const number = +guess;
 
-	if (invalidGuess(number)) {
-		guessElement.innerHTML += "<div>Valor inválido</div>";
-		return;
-	}
-
-	if (numberIsHigherOrLowerThanGuessThanAllowed(guess)) {
-		guessElement.innerHTML += `
-            <div>Valor inválido. Fale um número entre ${lowestValue} e ${highestValue}</div>
-        `;
-		return;
-	}
-
-	if (number === secretNumber) {
-		guessElement.innerHTML += `
-            <h2>Você acertou!!</h2>
-            <h3>O número secreto era ${secretNumber}</h3>
-
-            <button class="btn-play" id="play-again">Jogar novamente</button>
-        `;
-	} else if (number > secretNumber) {
-		guessElement.innerHTML += `
-            <div>O número secreto é menor <i class="fa-solid fa-down-long"></i></div>
-        `;
+	if (isInvalidGuess(number)) {
+		showErrorMessage("Valor inválido");
+	} else if (guessIsOutOfRange(guess)) {
+		showErrorMessage(`Valor inválido. Fale um número entre ${lowestValue} e ${highestValue}`);
 	} else {
-		guessElement.innerHTML += `
-            <div>O número secreto é maior <i class="fa-solid fa-up-long"></i></div>
-        `;
+		handleGuessResult(number);
 	}
 }
 
-function numberIsHigherOrLowerThanGuessThanAllowed(guess) {
-	return guess > highestValue || guess < lowestValue;
-}
-
-function invalidGuess(number) {
+function isInvalidGuess(number) {
 	return Number.isNaN(number);
 }
 
+function guessIsOutOfRange(guess) {
+	return guess > highestValue || guess < lowestValue;
+}
+
+function handleGuessResult(number) {
+	if (number === secretNumber) {
+		showSuccessMessage();
+		showPlayAgainButton();
+	} else if (number > secretNumber) {
+		showErrorMessage("O número secreto é menor", "fa-solid fa-down-long");
+	} else {
+		showErrorMessage("O número secreto é maior", "fa-solid fa-up-long");
+	}
+}
+
+function showErrorMessage(message, iconClassName = "") {
+	guessElement.innerHTML += `<div>${message} ${iconClassName ? `<i class="${iconClassName}"></i>` : ""}</div>`;
+}
+
+function showSuccessMessage() {
+	guessElement.innerHTML += `
+        <h2>Você acertou!!</h2>
+        <h3>O número secreto era ${secretNumber}</h3>
+    `;
+}
+
+function showPlayAgainButton() {
+	guessElement.innerHTML += `<button class="btn-play" id="play-again">Jogar novamente</button>`;
+}
+
+function handlePlayAgainClick() {
+	window.location.reload();
+}
+
 document.body.addEventListener("click", (event) => {
-	if (event.target.id == "play-again") {
-		window.location.reload();
+	if (event.target.id === "play-again") {
+		handlePlayAgainClick();
 	}
 });
