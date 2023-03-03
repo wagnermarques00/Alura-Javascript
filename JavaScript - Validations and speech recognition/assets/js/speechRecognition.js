@@ -10,8 +10,8 @@ recognition.addEventListener("end", () => recognition.start());
 
 function onSpeak(event) {
 	guess = event.results[0][0].transcript;
+
 	showGuessOnScreen(guess);
-	// verifyIfGuessIsAValidNumber(guess);
 	validateGuess(guess);
 }
 

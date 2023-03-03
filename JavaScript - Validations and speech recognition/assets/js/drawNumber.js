@@ -12,4 +12,4 @@ function generateRandomNumber() {
 	return parseInt(Math.random() * highestValue + 1);
 }
 
-console.log(`Número secreto: ${secretNumber}`);
+// console.log(`Número secreto: ${secretNumber}`); -> If you want to see the result previously, uncomment this line and the drawn number will appear in the console.log

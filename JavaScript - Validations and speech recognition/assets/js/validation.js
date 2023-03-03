@@ -1,5 +1,5 @@
 function validateGuess(guess) {
-	const number = +guess;
+	const number = +guess; // Unary operator. Convert to number
 
 	if (isInvalidGuess(number)) {
 		showErrorMessage("Valor inválido");
