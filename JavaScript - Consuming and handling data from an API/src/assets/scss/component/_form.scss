@@ -1,0 +1,88 @@
+.main {
+	margin: 5em auto 6em auto;
+	width: 50vw;
+
+	.main__title {
+		color: $color-orange;
+		font-size: 1.6rem;
+		font-style: normal;
+		font-weight: 700;
+	}
+
+	.main__form {
+		display: flex;
+		flex-direction: column;
+
+		.main__subtitle {
+			margin: 3em 0 2em 0;
+
+			color: $color-blue;
+			font-size: 1rem;
+			font-weight: 700;
+			line-height: 1.6rem;
+		}
+
+		.form__field {
+			margin: 0.6em 3em 0.6em 0;
+
+			.field__label {
+				display: block;
+
+				margin-left: 1em;
+
+				color: $color-blue;
+				font-size: 1rem;
+				font-weight: 700;
+				line-height: 1.5rem;
+			}
+
+			.field__input {
+				border: 1px solid $color-blue;
+				border-radius: 1.5rem;
+				padding: 1em;
+				width: 100%;
+			}
+		}
+
+		.form__twice {
+			display: flex;
+		}
+
+		.form__button {
+			align-self: center;
+
+			background: $color-orange;
+			border: none;
+			border-radius: 0.5rem;
+			cursor: pointer;
+			padding: 1em 4em;
+
+			color: $color-white;
+			font-size: 1.25rem;
+			font-weight: 700;
+			line-height: 1.9rem;
+		}
+	}
+}
+
+.form__error {
+	display: flex;
+	align-items: center;
+
+	margin-top: 0.5em;
+}
+
+.error__image {
+	background-image: url("/src/assets/img/warning.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 1rem;
+	margin: 0 0.5em;
+	width: 1rem;
+}
+
+.error__text {
+	color: $color-red;
+	font-size: 0.75rem;
+	line-height: 1.125rem;
+}

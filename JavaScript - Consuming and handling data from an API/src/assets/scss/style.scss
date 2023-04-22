@@ -1,0 +1,15 @@
+//External fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+//External styles
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css");
+@import url("https://unpkg.com/swiper@8/swiper-bundle.min.css");
+
+//Internal styles
+@import "./abstract/base";
+@import "./component/banner";
+@import "./component/form";
+@import "./component/header";
+@import "./component/footer";
+@import "./component/registration";

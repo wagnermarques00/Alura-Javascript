@@ -1,0 +1,17 @@
+@import "../abstract/variables";
+
+.registration {
+	box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+	border-radius: 0.7rem;
+	padding: 2em;
+
+	.registration__subtitle {
+		margin: 1em 0;
+	}
+
+	.registration__image {
+		display: block;
+
+		margin: 3em auto 0 auto;
+	}
+}

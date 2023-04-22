@@ -1,0 +1,55 @@
+@import "../abstract/variables";
+
+.footer {
+	background-color: $color-white;
+	padding: 1em;
+
+	.footer-list {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.footer {
+		display: flex;
+		justify-content: space-around;
+
+		.footer__title {
+			font-size: 1.5rem;
+		}
+
+		.footer-list {
+			display: block;
+
+			.footer-list__title {
+				color: $color-gray-light;
+				font-size: 0.9rem;
+			}
+
+			.footer-list__item {
+				display: flex;
+				align-items: center;
+
+				margin: 0.6em 0;
+
+				.footer-list__link {
+					margin-left: 0.6em;
+
+					color: $color-gray;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1728px) {
+	.footer {
+		padding: 3em 0;
+
+		.footer-list {
+			border-left: 1px solid $color-gray-light;
+			padding-left: 1em;
+		}
+	}
+}

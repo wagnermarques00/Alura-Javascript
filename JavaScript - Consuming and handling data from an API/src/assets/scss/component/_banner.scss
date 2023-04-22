@@ -1,0 +1,22 @@
+@import "../abstract/variables";
+
+.banner {
+	background: $color-blue-gradient;
+	padding: 1em;
+
+	color: $color-white;
+	text-align: center;
+
+	.banner__title {
+		font-size: 1.3rem;
+		font-weight: 700;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.banner {
+		.banner__title {
+			font-size: 2.25rem;
+		}
+	}
+}
