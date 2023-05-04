@@ -1,0 +1,13 @@
+.wrap {
+	margin: 0 auto;
+	width: 1280px;
+
+	.nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		height: 30px;
+		margin: 4rem 0;
+	}
+}

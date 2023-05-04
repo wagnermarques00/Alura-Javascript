@@ -1,0 +1,25 @@
+@use "../abstract/variables";
+
+.btn {
+	background-color: $button-color;
+	border: none;
+	cursor: pointer;
+	height: 44px;
+
+	padding: 10px 16px;
+	border-radius: 8px;
+
+	color: $text-white-color;
+	font-family: $font-poppins;
+	font-size: 0.9rem;
+	font-style: normal;
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover {
+		color: $text-button-hover;
+		border-radius: 10px;
+		border-bottom: 2px solid $text-description-color;
+	}
+}

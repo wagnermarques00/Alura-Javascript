@@ -1,0 +1,22 @@
+@use "../abstract/variables";
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	margin-left: 0.5rem;
+	margin-top: 1rem;
+
+	.tag {
+		color: $text-tag-color;
+		font-size: 14px;
+		font-weight: 500;
+		text-align: left;
+
+		background: rgba(197, 197, 197, 0.25);
+		border-radius: 4px;
+		margin-right: 1rem;
+		padding: 5px 4px;
+	}
+}

@@ -1,0 +1,43 @@
+@use "../abstract/variables";
+
+.books {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.book {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		height: 644px;
+		margin-bottom: 1rem;
+		width: 302px;
+
+		.book__description {
+			color: $text-author-color;
+			font-size: 18px;
+			margin: 1rem 0;
+			text-align: center;
+		}
+
+		.book__price {
+			color: $text-price-color;
+			text-align: center;
+			font-size: 24px;
+			font-weight: 700;
+		}
+
+		.book__title {
+			color: $text-title-color;
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 24px;
+			text-align: center;
+		}
+
+		.unavailable {
+			opacity: 0.3;
+		}
+	}
+}
