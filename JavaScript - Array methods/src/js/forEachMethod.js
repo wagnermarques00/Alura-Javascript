@@ -1,6 +1,8 @@
 const insertBooksElement = document.getElementById("books");
 
 function renderBooks(bookList) {
+	insertBooksElement.innerHTML = "";
+
 	bookList.forEach((book) => {
 		const formattedPrice = book.preco.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
