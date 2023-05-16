@@ -9,7 +9,8 @@ Studies carried out on the Alura platform. I choose to put the codes in English 
 1. JavaScript for the Web: Storing data in the browser
 1. JavaScript: Validations and speech recognition
 1. JavaScript: Consuming and handling data from an API
+1. JavaScript: Array methods
 
 ## Studying at the moment:
 
-- JavaScript: Array methods
+- JavaScript: Creating requests
