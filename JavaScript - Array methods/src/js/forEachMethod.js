@@ -1,11 +1,13 @@
 const insertBooksElement = document.getElementById("books");
+const totalBooksValueElement = document.getElementById("availableBooksTotalValue");
 
 function renderBooks(bookList) {
+	totalBooksValueElement.innerHTML = "";
 	insertBooksElement.innerHTML = "";
 
 	bookList.forEach((book) => {
 		const formattedPrice = book.preco.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
-		let availability = checkBookAvailability(book);
+		const availability = checkBookAvailability(book);
 
 		insertBooksElement.innerHTML += `
 			<div class="book">
@@ -22,7 +24,7 @@ function renderBooks(bookList) {
 }
 
 function checkBookAvailability(book) {
-	let available = book.quantidade > 0 ? "book__images" : "book__images unavailable";
+	const available = book.quantidade > 0 ? "book__images" : "book__images unavailable";
 
 	return available;
 }

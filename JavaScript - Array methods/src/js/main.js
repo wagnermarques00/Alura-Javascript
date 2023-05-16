@@ -1,12 +1,16 @@
 let books = [];
 const API_ENDPOINT = "https://guilhermeonrails.github.io/casadocodigo/livros.json";
 
-getBooksFromAPI();
+fetchBooksFromAPI();
 
-async function getBooksFromAPI() {
-	const response = await fetch(API_ENDPOINT);
-	books = await response.json();
-	let discountedBooks = applyDiscount(books);
+async function fetchBooksFromAPI() {
+	try {
+		const response = await fetch(API_ENDPOINT);
+		books = await response.json();
+		let discountedBooks = applyDiscount(books);
 
-	renderBooks(discountedBooks);
+		renderBooks(discountedBooks);
+	} catch (error) {
+		console.error("Erro ao obter os livros da API.", error);
+	}
 }
