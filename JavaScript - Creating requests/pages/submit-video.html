@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/styles.css" />
+		<link rel="stylesheet" href="../css/styles-form.css" />
+		<link rel="stylesheet" href="../css/flexbox.css" />
+		<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+
+		<title>AluraPlay</title>
+	</head>
+
+	<body>
+		<header>
+			<nav class="header">
+				<a class="logo" href="../index.html"></a>
+
+				<div class="header__icons">
+					<a class="header__videos" href="./submit-video.html"></a>
+				</div>
+			</nav>
+		</header>
+
+		<main class="container">
+			<form class="container__form">
+				<h2 class="form__title">Envie um vídeo!</h2>
+
+				<div class="form__field">
+					<label class="field__label" for="url">Link embed</label>
+					<input
+						class="field__input"
+						name="url"
+						required
+						placeholder="Por exemplo: https://www.youtube.com/embed/FAY1K2aUg5g"
+						id="url"
+					/>
+				</div>
+
+				<div class="form__field">
+					<label class="field__label" for="titulo">Titulo do vídeo</label>
+					<input
+						class="field__input"
+						name="titulo"
+						required
+						placeholder="Neste campo, dê o nome do vídeo"
+						d="title"
+					/>
+				</div>
+
+				<div class="form__field">
+					<label class="field__label" for="imagem">Imagem de perfil</label>
+					<input class="field__input" name="imagem" required placeholder="Insira a url da imagem" d="image" />
+				</div>
+
+				<input class="form__button" type="submit" />
+			</form>
+		</main>
+	</body>
+</html>
