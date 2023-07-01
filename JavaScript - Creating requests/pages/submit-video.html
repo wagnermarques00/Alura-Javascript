@@ -26,7 +26,7 @@
 		</header>
 
 		<main class="container">
-			<form class="container__form">
+			<form class="container__form" data-form-video>
 				<h2 class="form__title">Envie um vídeo!</h2>
 
 				<div class="form__field">
@@ -37,6 +37,7 @@
 						required
 						placeholder="Por exemplo: https://www.youtube.com/embed/FAY1K2aUg5g"
 						id="url"
+						data-url-video
 					/>
 				</div>
 
@@ -47,17 +48,26 @@
 						name="titulo"
 						required
 						placeholder="Neste campo, dê o nome do vídeo"
-						d="title"
+						id="title"
+						data-title-video
 					/>
 				</div>
 
 				<div class="form__field">
 					<label class="field__label" for="imagem">Imagem de perfil</label>
-					<input class="field__input" name="imagem" required placeholder="Insira a url da imagem" d="image" />
+					<input
+						class="field__input"
+						name="imagem"
+						required
+						placeholder="Insira a url da imagem"
+						id="image"
+						data-image-video
+					/>
 				</div>
 
 				<input class="form__button" type="submit" />
 			</form>
 		</main>
+		<script src="../js/createVideo.js" type="module"></script>
 	</body>
 </html>
