@@ -15,6 +15,9 @@ async function searchVideo(event) {
 	search.forEach((element) => {
 		list.appendChild(createCard(element.title, element.description, element.url, element.image));
 	});
+	if (search.length == 0) {
+		list.innerHTML = `<h2 class=""message__title">Não existem vídeos com este termo<h2>`;
+	}
 }
 
 const searchButton = document.querySelector("[data-search-button]");
