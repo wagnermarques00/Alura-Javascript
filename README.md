@@ -10,7 +10,8 @@ Studies carried out on the Alura platform. I choose to put the codes in English 
 1. JavaScript: Validations and speech recognition
 1. JavaScript: Consuming and handling data from an API
 1. JavaScript: Array methods
+1. JavaScript: Creating requests
 
 ## Studying at the moment:
 
-- JavaScript: Creating requests
+- Javascript: Validating forms
