@@ -1,0 +1,146 @@
+.banner {
+	background-image: url("../../img/banner-cliente.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 60vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.banner__title,
+.account__title {
+	font-weight: 600;
+	color: var(--white);
+	font-size: 32px;
+	line-height: 39px;
+}
+
+.banner__title {
+	width: 32%;
+	margin: 0 3em;
+}
+
+.services__title,
+.benefits__title {
+	font-size: 28px;
+	text-align: center;
+	font-weight: 600;
+	margin: 1em 0;
+}
+
+.list-services {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 4em 0;
+}
+
+.item-services__title {
+	background-color: var(--black);
+	color: var(--white);
+	font-weight: 600;
+	font-size: 24px;
+	text-align: center;
+	padding: 0.5em 0;
+	border-radius: 0 0 20px 20px;
+}
+
+.item-services__image {
+	display: block;
+}
+
+.account {
+	background-image: url("../../img/banner-gato.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 60vh;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	align-items: center;
+}
+
+.account__container {
+	width: 80%;
+	margin-left: 4em;
+}
+
+.account__button {
+	display: block;
+	margin-top: 0.5em;
+	width: 50%;
+	text-align: center;
+	background: var(--black);
+	border-radius: 20px;
+	color: var(--white);
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	padding: 0.5em;
+}
+
+.benefits-list {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 4em;
+	text-align: center;
+}
+
+.benefits-list__item {
+	width: 20%;
+}
+
+.benefits__icon {
+	width: 80px;
+	height: 80px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+}
+
+.icon-gift {
+	background-image: url("../../img/Presente.png");
+}
+
+.icon-withdraw {
+	background-image: url("../../img/Saque.png");
+}
+
+.icon-star {
+	background-image: url("../../img/Estrela.png");
+}
+
+.icon-cat {
+	background-image: url("../../img/Gato.png");
+}
+
+.benefits-list__title {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	color: var(--blue-light);
+	margin: 0.5em 0;
+}
+
+@media screen and (max-width: 798px) {
+	.benefits-list {
+		display: block;
+		margin: 1em;
+	}
+
+	.benefits-list__item {
+		width: 100%;
+	}
+
+	.account {
+		display: block;
+	}
+
+	.account__title {
+		padding: 1em 0;
+	}
+}

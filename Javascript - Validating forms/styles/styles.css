@@ -1,0 +1,20 @@
+@import url("./header.css");
+@import url("./footer.css");
+
+:root {
+	--font-main: "Montserrat", sans-serif;
+	--font-logo: "Inter", sans-serif;
+	--blue-light: #6bd1ff;
+	--black: #000000;
+	--white: #ffffff;
+}
+
+body {
+	font-family: var(--font-main);
+	color: var(--black);
+	font-size: 16px;
+}
+
+.header__logo-link {
+	text-decoration: none;
+}

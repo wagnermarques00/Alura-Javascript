@@ -1,0 +1,74 @@
+.header {
+	display: flex;
+	align-items: center;
+	margin: 2em 1em;
+}
+
+.header-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-basis: 100%;
+	font-size: 18px;
+	margin: 0 2em;
+}
+
+.header__logo-start {
+	font-family: var(--font-logo);
+	font-size: 28px;
+	font-weight: 700;
+	color: var(--blue-light);
+}
+
+.header__logo-end {
+	font-weight: 400;
+	font-style: italic;
+}
+
+.header__search {
+	border: 2px solid #000000;
+	border-radius: 20px;
+	padding: 0.7em 1em;
+	width: 20vw;
+}
+
+.header__search::placeholder {
+	font-size: 18px;
+	background: url("../img/ícone\ busca.png") no-repeat right center;
+}
+
+.header-list__item a {
+	text-decoration: none;
+}
+
+.header-list__link {
+	color: var(--black);
+}
+
+.header-list__item-button {
+	font-weight: 600;
+	border-radius: 20px;
+	padding: 0.5em 1em;
+	color: var(--blue-light);
+	border: var(--blue-light) 2px solid;
+}
+
+.header-list__item-button--blue {
+	background-color: var(--blue-light);
+	color: var(--white);
+}
+
+@media screen and (max-width: 900px) {
+	.header {
+		margin: 2em;
+	}
+
+	.header__search,
+	.header-list__item {
+		display: none;
+	}
+
+	.header-list__item-button {
+		display: block;
+	}
+}
