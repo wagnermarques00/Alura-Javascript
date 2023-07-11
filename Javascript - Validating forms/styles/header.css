@@ -58,6 +58,10 @@
 	color: var(--white);
 }
 
+.header__logo-link {
+	text-decoration: none;
+}
+
 @media screen and (max-width: 900px) {
 	.header {
 		margin: 2em;

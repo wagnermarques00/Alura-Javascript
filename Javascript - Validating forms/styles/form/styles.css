@@ -65,7 +65,7 @@
 	line-height: 20px;
 }
 
-.field__write {
+.field__input {
 	display: block;
 	border: 2px solid var(--blue-light);
 	border-radius: 20px;
@@ -74,7 +74,7 @@
 	margin-top: 0.5em;
 }
 
-.field__write--small {
+.field__input--small {
 	width: 50%;
 }
 
@@ -127,7 +127,7 @@
 	color: red;
 }
 
-.field__write--error {
+.field__input--error {
 	border: 2px solid red;
 }
 
