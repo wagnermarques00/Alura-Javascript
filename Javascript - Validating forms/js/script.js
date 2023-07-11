@@ -2,7 +2,7 @@ import isCPF from "./checkCPF";
 
 const formFields = document.querySelectorAll("[required]");
 
-camposDoFormulario.forEach((field) => {
+formFields.forEach((field) => {
 	field.addEventListener("blur", () => checkField(field));
 });
 
