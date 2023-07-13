@@ -1,6 +1,8 @@
 export default function isAdult(age) {
 	const birthDate = new Date(age.value);
-	checkAge(birthDate);
+	if (!checkAge(birthDate)) {
+		age.setCustomValidity("O usuário não é maior de idade");
+	}
 }
 
 function checkAge(date) {

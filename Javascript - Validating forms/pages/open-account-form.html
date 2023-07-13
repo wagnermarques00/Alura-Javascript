@@ -64,22 +64,22 @@
 					<h2 class="form__title-text">Preencha os campos abaixo para criar sua conta corrente!</h2>
 				</div>
 
-				<form data-form class="main__form">
+				<form class="main__form" data-form>
 					<fieldset class="form__field">
 						<label class="field__label" for="nome">Nome</label>
 						<input class="field__input" id="nome" name="nome" type="text" minlength="3" required />
-						<span class="error-message"></span>
+						<span class="message-error"></span>
 					</fieldset>
 
 					<fieldset class="form__field">
 						<label class="field__label" for="email">E-mail</label>
 						<input class="field__input" id="email" name="email" type="email" minlength="4" required />
-						<span class="error-message"></span>
+						<span class="message-error"></span>
 					</fieldset>
 					<fieldset class="form__field">
 						<label class="field__label" for="rg">RG</label>
 						<input class="field__input field__input--small" id="rg" name="rg" type="text" required />
-						<span class="error-message"></span>
+						<span class="message-error"></span>
 					</fieldset>
 					<fieldset class="form__field">
 						<label class="field__label" for="cpf">CPF (apenas números)</label>
@@ -93,7 +93,7 @@
 							maxlength="14"
 							pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
 						/>
-						<span class="error-message"></span>
+						<span class="message-error"></span>
 					</fieldset>
 					<fieldset class="form__field">
 						<label class="field__label" for="aniversario">Data de nascimento</label>
@@ -104,7 +104,7 @@
 							type="date"
 							required
 						/>
-						<span class="error-message"></span>
+						<span class="message-error"></span>
 					</fieldset>
 					<fieldset class="form__terms">
 						<input class="terms__input" name="termos" type="checkbox" required />
@@ -112,12 +112,12 @@
 							Li e estou ciente quanto às condições de tratamento dos meus dados conforme descrito na
 							Política de Privacidade do banco.
 						</p>
-						<span class="error-message"></span>
+						<span class="message-error"></span>
 					</fieldset>
 
 					<div>
 						<input class="form__button" id="enviar" type="submit" data-botao-enviar value="Avançar" />
-						<span class="error-message"></span>
+						<span class="message-error"></span>
 					</div>
 				</form>
 			</section>
