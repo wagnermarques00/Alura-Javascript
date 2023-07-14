@@ -1,6 +1,6 @@
 # Javascript
 
-Studies carried out on the Alura platform. I choose to put the codes in English during the courses as much as possible. I also choose to do the styling using SASS instead pure CSS.
+Studies carried out on the Alura platform. I choose to put the codes in English during the courses as much as possible.
 
 ## Studied so far:
 
@@ -11,7 +11,8 @@ Studies carried out on the Alura platform. I choose to put the codes in English 
 1. JavaScript: Consuming and handling data from an API
 1. JavaScript: Array methods
 1. JavaScript: Creating requests
+1. JavaScript: Validating forms
 
 ## Studying at the moment:
 
-- Javascript: Validating forms
+- 
